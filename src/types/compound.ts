@@ -32,21 +32,15 @@ export type CompoundData = {
   compounds: Compound[];
 };
 
-export type QuestionType =
-  | "nameByFormula"
-  | "formulaByName"
-  | "nameByStructure"
-  | "classByName"
-  | "nameByClass"
-  | "nameByProperties"
-  | "nameByReactions";
+export type QuestionType = "nameByStructure" | "propertiesByStructure";
 
 export type Question = {
   prompt: string;
   imageUrl?: string;
-  answerType: "name" | "formula" | "className";
+  answerType: "name" | "properties";
   correctAnswer: string;
   options: string[];
   compound: Compound;
   type: QuestionType;
+  key: string;
 };

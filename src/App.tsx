@@ -5,6 +5,7 @@ import type { CompoundData, Question } from "@/types/compound";
 
 const data = rawData as CompoundData;
 const compounds = data.compounds;
+const RECENT_QUESTION_LIMIT = 12;
 
 function optionClassName(question: Question, selectedAnswer: string | null, option: string) {
   const base =
@@ -28,10 +29,14 @@ function optionClassName(question: Question, selectedAnswer: string | null, opti
 export default function App() {
   const [question, setQuestion] = useState<Question | null>(null);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
+  const [recentQuestionKeys, setRecentQuestionKeys] = useState<string[]>([]);
 
   function nextQuestion() {
-    setQuestion(generateQuestion(compounds));
+    const next = generateQuestion(compounds, recentQuestionKeys);
+
+    setQuestion(next);
     setSelectedAnswer(null);
+    setRecentQuestionKeys((keys) => [next.key, ...keys.filter((key) => key !== next.key)].slice(0, RECENT_QUESTION_LIMIT));
   }
 
   useEffect(() => {
@@ -68,11 +73,7 @@ export default function App() {
                     Вопрос
                   </span>
                   <span className="rounded-full bg-emerald-100 px-3 py-1 text-sm font-semibold text-emerald-900">
-                    {question.answerType === "formula"
-                      ? "выбери формулу"
-                      : question.answerType === "className"
-                        ? "выбери класс"
-                        : "выбери название"}
+                    {question.answerType === "properties" ? "выбери свойства" : "выбери название"}
                   </span>
                 </div>
 

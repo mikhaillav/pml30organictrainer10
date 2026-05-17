@@ -2,16 +2,9 @@ import type { Compound, Question, QuestionType } from "@/types/compound";
 import { getLocalStructureImageUrl } from "./localStructureImages";
 
 const MIN_HINT_LENGTH = 18;
+const PROPERTY_OPTION_LENGTH = 180;
 
-const QUESTION_TYPES: QuestionType[] = [
-  "nameByFormula",
-  "formulaByName",
-  "nameByStructure",
-  "classByName",
-  "nameByClass",
-  "nameByProperties",
-  "nameByReactions",
-];
+const QUESTION_TYPES: QuestionType[] = ["nameByStructure", "propertiesByStructure"];
 
 function shuffle<T>(items: T[]): T[] {
   return [...items].sort(() => Math.random() - 0.5);
@@ -41,6 +34,10 @@ function truncateText(value: string, maxLength = 230): string {
   return `${value.slice(0, maxLength).trim()}...`;
 }
 
+function makePropertyOption(compound: Compound): string {
+  return truncateText(joinedText(compound.propertiesApplicationBiologicalRole), PROPERTY_OPTION_LENGTH);
+}
+
 function makeOptions(correctAnswer: string, wrongAnswers: string[]): string[] | null {
   const uniqueWrongAnswers = uniqueValues(wrongAnswers).filter(
     (answer) => answer !== correctAnswer,
@@ -68,53 +65,17 @@ function buildQuestion(
   type: QuestionType,
   compounds: Compound[],
 ): Question | null {
+  const imageUrl = getStructureImageUrl(compound, "small");
+
+  if (!imageUrl) {
+    return null;
+  }
+
   const otherCompounds = compounds.filter((item) => item.id !== compound.id);
+  const key = `${type}:${compound.id}`;
 
-  // Each branch builds one question shape and chooses only unambiguous distractors.
   switch (type) {
-    case "nameByFormula": {
-      const options = makeOptions(
-        compound.name,
-        otherCompounds.map((item) => item.name),
-      );
-
-      return options
-        ? {
-            prompt: `Как называется соединение с формулой ${compound.formula || compound.plainFormula}?`,
-            answerType: "name",
-            correctAnswer: compound.name,
-            options,
-            compound,
-            type,
-          }
-        : null;
-    }
-
-    case "formulaByName": {
-      const options = makeOptions(
-        compound.formula,
-        otherCompounds.map((item) => item.formula),
-      );
-
-      return options
-        ? {
-            prompt: `Какая формула у вещества «${compound.name}»?`,
-            answerType: "formula",
-            correctAnswer: compound.formula,
-            options,
-            compound,
-            type,
-          }
-        : null;
-    }
-
     case "nameByStructure": {
-      const imageUrl = getStructureImageUrl(compound, "small");
-
-      if (!imageUrl) {
-        return null;
-      }
-
       const options = makeOptions(
         compound.name,
         otherCompounds.map((item) => item.name),
@@ -129,97 +90,54 @@ function buildQuestion(
             options,
             compound,
             type,
+            key,
           }
         : null;
     }
 
-    case "classByName": {
-      const options = makeOptions(
-        compound.className,
-        otherCompounds.map((item) => item.className),
-      );
-
-      return options
-        ? {
-            prompt: `К какому классу относится «${compound.name}»?`,
-            answerType: "className",
-            correctAnswer: compound.className,
-            options,
-            compound,
-            type,
-          }
-        : null;
-    }
-
-    case "nameByClass": {
-      const options = makeOptions(
-        compound.name,
-        compounds
-          .filter((item) => item.className !== compound.className)
-          .map((item) => item.name),
-      );
-
-      return options
-        ? {
-            prompt: `Какое вещество относится к классу «${compound.className}»?`,
-            answerType: "name",
-            correctAnswer: compound.name,
-            options,
-            compound,
-            type,
-          }
-        : null;
-    }
-
-    case "nameByProperties": {
+    case "propertiesByStructure": {
       if (!hasUsefulText(compound.propertiesApplicationBiologicalRole)) {
         return null;
       }
 
+      const correctAnswer = makePropertyOption(compound);
       const options = makeOptions(
-        compound.name,
-        otherCompounds.map((item) => item.name),
+        correctAnswer,
+        otherCompounds
+          .filter((item) => hasUsefulText(item.propertiesApplicationBiologicalRole))
+          .map(makePropertyOption),
       );
 
       return options
         ? {
-            prompt: `Для какого вещества характерно: ${truncateText(joinedText(compound.propertiesApplicationBiologicalRole))}`,
-            answerType: "name",
-            correctAnswer: compound.name,
+            prompt: "Какие свойства, применение или биологическая роль соответствуют этому соединению?",
+            imageUrl,
+            answerType: "properties",
+            correctAnswer,
             options,
             compound,
             type,
-          }
-        : null;
-    }
-
-    case "nameByReactions": {
-      if (!hasUsefulText(compound.keyReactions)) {
-        return null;
-      }
-
-      const options = makeOptions(
-        compound.name,
-        otherCompounds.map((item) => item.name),
-      );
-
-      return options
-        ? {
-            prompt: `Для какого вещества характерны такие реакции: ${truncateText(joinedText(compound.keyReactions))}`,
-            answerType: "name",
-            correctAnswer: compound.name,
-            options,
-            compound,
-            type,
+            key,
           }
         : null;
     }
   }
 }
 
-export function generateQuestion(compounds: Compound[]): Question {
+export function generateQuestion(compounds: Compound[], recentQuestionKeys: string[] = []): Question {
   const shuffledCompounds = shuffle(compounds);
   const shuffledTypes = shuffle(QUESTION_TYPES);
+  const recentKeys = new Set(recentQuestionKeys);
+
+  for (const compound of shuffledCompounds) {
+    for (const type of shuffledTypes) {
+      const question = buildQuestion(compound, type, compounds);
+
+      if (question && !recentKeys.has(question.key)) {
+        return question;
+      }
+    }
+  }
 
   for (const compound of shuffledCompounds) {
     for (const type of shuffledTypes) {
@@ -232,22 +150,25 @@ export function generateQuestion(compounds: Compound[]): Question {
   }
 
   const fallbackCompound = sample(compounds);
+  const fallbackImageUrl = getStructureImageUrl(fallbackCompound, "small");
   const fallbackOptions = makeOptions(
     fallbackCompound.name,
     compounds.filter((item) => item.id !== fallbackCompound.id).map((item) => item.name),
   );
 
-  if (!fallbackOptions) {
+  if (!fallbackImageUrl || !fallbackOptions) {
     throw new Error("Недостаточно уникальных соединений для генерации вопроса.");
   }
 
   return {
-    prompt: `Как называется соединение с формулой ${fallbackCompound.formula}?`,
+    prompt: "Как называется это соединение?",
+    imageUrl: fallbackImageUrl,
     answerType: "name",
     correctAnswer: fallbackCompound.name,
     options: fallbackOptions,
     compound: fallbackCompound,
-    type: "nameByFormula",
+    type: "nameByStructure",
+    key: `nameByStructure:${fallbackCompound.id}`,
   };
 }
 
