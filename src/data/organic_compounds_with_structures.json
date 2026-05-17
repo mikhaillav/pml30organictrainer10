@@ -1,0 +1,1092 @@
+{
+  "title": "30 важнейших органических соединений — структурные формулы из Википедии / Wikimedia Commons",
+  "source": "Составлено по таблице пользователя; структурные формулы заменены на изображения из Wikimedia Commons / Wikipedia file pages.",
+  "schema": {
+    "id": "number",
+    "name": "string",
+    "aliases": "string[]",
+    "formula": "string with unicode subscripts",
+    "plainFormula": "string without unicode subscripts",
+    "className": "string",
+    "propertiesApplicationBiologicalRole": "string[]",
+    "keyReactions": "string[]",
+    "pubchemCid": "number",
+    "pubchemName": "string",
+    "pubchemPageUrl": "string",
+    "structuralFormulaImageUrl": "PNG-картинка структурной формулы через NCI/CADD CACTVS",
+    "structuralFormulaImageUrlSmall": "маленькая PNG-картинка структурной формулы через NCI/CADD CACTVS",
+    "structuralFormulaSource": "string",
+    "smiles": "SMILES-запись структуры",
+    "cactusIdentifierType": "тип идентификатора для NCI/CADD resolver",
+    "cactusIdentifierEncoded": "URL-encoded SMILES",
+    "pubchemStructuralFormulaImageUrl": "старая большая ссылка PubChem, fallback",
+    "pubchemStructuralFormulaImageUrlSmall": "старая маленькая ссылка PubChem, fallback",
+    "wikimediaCommonsFileName": "Имя файла на Wikimedia Commons",
+    "wikimediaCommonsFilePageUrl": "Страница файла на Wikimedia Commons",
+    "wikipediaStructuralFormulaImageUrl": "Изображение структурной формулы через Wikimedia Commons Special:FilePath",
+    "wikipediaStructuralFormulaImageUrlSmall": "Маленькая версия изображения через Wikimedia Commons Special:FilePath"
+  },
+  "compounds": [
+    {
+      "id": 1,
+      "name": "Метан",
+      "aliases": [],
+      "formula": "CH₄",
+      "plainFormula": "CH4",
+      "className": "Алкан",
+      "propertiesApplicationBiologicalRole": [
+        "Бесцветный горючий газ, основной компонент природного газа.",
+        "Используется как топливо и сырьё для органического синтеза.",
+        "При горении образует углекислый газ и воду."
+      ],
+      "keyReactions": [
+        "Горение: CH₄ + 2O₂ → CO₂ + 2H₂O",
+        "Получение из карбида алюминия: Al₄C₃ + 12H₂O → 3CH₄ + 4Al(OH)₃"
+      ],
+      "pubchemCid": 297,
+      "pubchemName": "Methane",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/297",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Methane-2D.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Methane-2D.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/297/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/297/record/PNG?record_type=2d&image_size=small",
+      "smiles": "C",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "C",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/C/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/C/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "Methane-2D.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Methane-2D.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Methane-2D.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Methane-2D.svg?width=320"
+    },
+    {
+      "id": 2,
+      "name": "Хлороформ",
+      "aliases": [
+        "Трихлорметан"
+      ],
+      "formula": "CHCl₃",
+      "plainFormula": "CHCl3",
+      "className": "Галогеналкан",
+      "propertiesApplicationBiologicalRole": [
+        "Летучая бесцветная жидкость со сладковатым запахом.",
+        "Используется как растворитель; раньше применялся для наркоза.",
+        "Токсичен, требует осторожного обращения."
+      ],
+      "keyReactions": [
+        "Радикальное хлорирование метана: CH₄ + 3Cl₂ → CHCl₃ + 3HCl"
+      ],
+      "pubchemCid": 6212,
+      "pubchemName": "Chloroform",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/6212",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Chloroform%20displayed.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Chloroform%20displayed.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/6212/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/6212/record/PNG?record_type=2d&image_size=small",
+      "smiles": "C(Cl)(Cl)Cl",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "C%28Cl%29%28Cl%29Cl",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/C%28Cl%29%28Cl%29Cl/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/C%28Cl%29%28Cl%29Cl/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "Chloroform displayed.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Chloroform%20displayed.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Chloroform%20displayed.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Chloroform%20displayed.svg?width=320"
+    },
+    {
+      "id": 3,
+      "name": "Этилен",
+      "aliases": [
+        "Этен"
+      ],
+      "formula": "CH₂=CH₂",
+      "plainFormula": "CH2=CH2",
+      "className": "Алкен",
+      "propertiesApplicationBiologicalRole": [
+        "Бесцветный газ с двойной связью.",
+        "Обесцвечивает бромную воду, вступая в реакции присоединения.",
+        "Ускоряет созревание плодов; сырьё для получения полиэтилена."
+      ],
+      "keyReactions": [
+        "Полимеризация: nCH₂=CH₂ → (−CH₂−CH₂−)ₙ",
+        "Присоединение брома: CH₂=CH₂ + Br₂ → BrCH₂−CH₂Br"
+      ],
+      "pubchemCid": 6325,
+      "pubchemName": "Ethylene",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/6325",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Ethylene.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Ethylene.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/6325/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/6325/record/PNG?record_type=2d&image_size=small",
+      "smiles": "C=C",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "C%3DC",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/C%3DC/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/C%3DC/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "Ethylene.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Ethylene.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Ethylene.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Ethylene.svg?width=320"
+    },
+    {
+      "id": 4,
+      "name": "Ацетилен",
+      "aliases": [
+        "Этин"
+      ],
+      "formula": "HC≡CH",
+      "plainFormula": "HC≡CH",
+      "className": "Алкин",
+      "propertiesApplicationBiologicalRole": [
+        "Бесцветный газ с тройной связью.",
+        "Используется для газовой сварки и резки металлов.",
+        "Получают из карбида кальция действием воды."
+      ],
+      "keyReactions": [
+        "Получение: CaC₂ + 2H₂O → C₂H₂ + Ca(OH)₂",
+        "Тримеризация: 3C₂H₂ → C₆H₆"
+      ],
+      "pubchemCid": 6326,
+      "pubchemName": "Acetylene",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/6326",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Structural%20formula%20of%20acetylene.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Structural%20formula%20of%20acetylene.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/6326/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/6326/record/PNG?record_type=2d&image_size=small",
+      "smiles": "C#C",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "C%23C",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/C%23C/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/C%23C/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "Structural formula of acetylene.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Structural%20formula%20of%20acetylene.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Structural%20formula%20of%20acetylene.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Structural%20formula%20of%20acetylene.svg?width=320"
+    },
+    {
+      "id": 5,
+      "name": "Бензол",
+      "aliases": [],
+      "formula": "C₆H₆",
+      "plainFormula": "C6H6",
+      "className": "Арен, ароматический углеводород",
+      "propertiesApplicationBiologicalRole": [
+        "Бесцветная летучая жидкость с характерным запахом.",
+        "Токсичен, плохо растворяется в воде.",
+        "Используется как сырьё для синтеза красителей, пластмасс и других веществ."
+      ],
+      "keyReactions": [
+        "Получение из ацетилена: 3HC≡CH → C₆H₆",
+        "Для бензола характерны реакции замещения, а не присоединения."
+      ],
+      "pubchemCid": 241,
+      "pubchemName": "Benzene",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/241",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Benzene%20circle.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Benzene%20circle.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/241/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/241/record/PNG?record_type=2d&image_size=small",
+      "smiles": "c1ccccc1",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "c1ccccc1",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/c1ccccc1/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/c1ccccc1/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "Benzene circle.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Benzene%20circle.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Benzene%20circle.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Benzene%20circle.svg?width=320"
+    },
+    {
+      "id": 6,
+      "name": "Толуол",
+      "aliases": [
+        "Метилбензол"
+      ],
+      "formula": "C₆H₅CH₃",
+      "plainFormula": "C6H5CH3",
+      "className": "Арен, ароматический углеводород",
+      "propertiesApplicationBiologicalRole": [
+        "Бесцветная жидкость, хороший органический растворитель.",
+        "Используется как сырьё для получения тротила и других веществ.",
+        "Получают алкилированием бензола."
+      ],
+      "keyReactions": [
+        "Получение: C₆H₆ + CH₃Cl → C₆H₅CH₃ + HCl"
+      ],
+      "pubchemCid": 1140,
+      "pubchemName": "Toluene",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/1140",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Toluene.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Toluene.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/1140/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/1140/record/PNG?record_type=2d&image_size=small",
+      "smiles": "Cc1ccccc1",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "Cc1ccccc1",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/Cc1ccccc1/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/Cc1ccccc1/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "Toluene.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Toluene.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Toluene.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Toluene.svg?width=320"
+    },
+    {
+      "id": 7,
+      "name": "Тринитротолуол",
+      "aliases": [
+        "Тротил",
+        "TNT"
+      ],
+      "formula": "C₆H₂(NO₂)₃CH₃",
+      "plainFormula": "C6H2(NO2)3CH3",
+      "className": "Нитросоединение, ароматическое соединение",
+      "propertiesApplicationBiologicalRole": [
+        "Жёлтое кристаллическое вещество.",
+        "Используется как взрывчатое вещество.",
+        "Получают нитрованием толуола."
+      ],
+      "keyReactions": [
+        "Нитрование: C₆H₅CH₃ + 3HNO₃ → C₆H₂(NO₂)₃CH₃ + 3H₂O"
+      ],
+      "pubchemCid": 8376,
+      "pubchemName": "2,4,6-Trinitrotoluene",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/8376",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Trinitrotoluene.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Trinitrotoluene.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/8376/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/8376/record/PNG?record_type=2d&image_size=small",
+      "smiles": "Cc1c([N+](=O)[O-])cc([N+](=O)[O-])cc1[N+](=O)[O-]",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "Cc1c%28%5BN%2B%5D%28%3DO%29%5BO-%5D%29cc%28%5BN%2B%5D%28%3DO%29%5BO-%5D%29cc1%5BN%2B%5D%28%3DO%29%5BO-%5D",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/Cc1c%28%5BN%2B%5D%28%3DO%29%5BO-%5D%29cc%28%5BN%2B%5D%28%3DO%29%5BO-%5D%29cc1%5BN%2B%5D%28%3DO%29%5BO-%5D/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/Cc1c%28%5BN%2B%5D%28%3DO%29%5BO-%5D%29cc%28%5BN%2B%5D%28%3DO%29%5BO-%5D%29cc1%5BN%2B%5D%28%3DO%29%5BO-%5D/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "Trinitrotoluene.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Trinitrotoluene.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Trinitrotoluene.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Trinitrotoluene.svg?width=320"
+    },
+    {
+      "id": 8,
+      "name": "Стирол",
+      "aliases": [
+        "Винилбензол"
+      ],
+      "formula": "C₆H₅CH=CH₂",
+      "plainFormula": "C6H5CH=CH2",
+      "className": "Арен, ароматический углеводород",
+      "propertiesApplicationBiologicalRole": [
+        "Бесцветная жидкость с двойной связью в боковой цепи.",
+        "Используется как мономер для получения полистирола.",
+        "Вступает в реакции полимеризации."
+      ],
+      "keyReactions": [
+        "Полимеризация: nC₆H₅CH=CH₂ → (−CH₂−CH(C₆H₅)−)ₙ"
+      ],
+      "pubchemCid": 7501,
+      "pubchemName": "Styrene",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/7501",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Structural%20formulas%20styrene.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Structural%20formulas%20styrene.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/7501/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/7501/record/PNG?record_type=2d&image_size=small",
+      "smiles": "C=CC1=CC=CC=C1",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "C%3DCC1%3DCC%3DCC%3DC1",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/C%3DCC1%3DCC%3DCC%3DC1/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/C%3DCC1%3DCC%3DCC%3DC1/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "Structural formulas styrene.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Structural%20formulas%20styrene.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Structural%20formulas%20styrene.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Structural%20formulas%20styrene.svg?width=320"
+    },
+    {
+      "id": 9,
+      "name": "Анилин",
+      "aliases": [
+        "Фениламин"
+      ],
+      "formula": "C₆H₅NH₂",
+      "plainFormula": "C6H5NH2",
+      "className": "Амин, ароматический амин",
+      "propertiesApplicationBiologicalRole": [
+        "Маслянистая жидкость, плохо растворимая в воде.",
+        "Является слабым основанием.",
+        "Используется для получения красителей, лекарств и полимеров."
+      ],
+      "keyReactions": [
+        "Получение восстановлением нитробензола: C₆H₅NO₂ + 3H₂ → C₆H₅NH₂ + 2H₂O"
+      ],
+      "pubchemCid": 6115,
+      "pubchemName": "Aniline",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/6115",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Structural%20formula%20of%20aniline.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Structural%20formula%20of%20aniline.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/6115/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/6115/record/PNG?record_type=2d&image_size=small",
+      "smiles": "NC1=CC=CC=C1",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "NC1%3DCC%3DCC%3DC1",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/NC1%3DCC%3DCC%3DC1/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/NC1%3DCC%3DCC%3DC1/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "Structural formula of aniline.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Structural%20formula%20of%20aniline.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Structural%20formula%20of%20aniline.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Structural%20formula%20of%20aniline.svg?width=320"
+    },
+    {
+      "id": 10,
+      "name": "Дивинил",
+      "aliases": [
+        "Бутадиен-1,3"
+      ],
+      "formula": "CH₂=CH−CH=CH₂",
+      "plainFormula": "CH2=CH-CH=CH2",
+      "className": "Алкадиен",
+      "propertiesApplicationBiologicalRole": [
+        "Газообразный непредельный углеводород с двумя двойными связями.",
+        "Используется как мономер для получения синтетических каучуков.",
+        "Вступает в реакции полимеризации."
+      ],
+      "keyReactions": [
+        "Полимеризация: nCH₂=CH−CH=CH₂ → (−CH₂−CH=CH−CH₂−)ₙ"
+      ],
+      "pubchemCid": 7845,
+      "pubchemName": "1,3-Butadiene",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/7845",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/1%2C3-Butadiene%20Structural%20Formula%20V1.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/1%2C3-Butadiene%20Structural%20Formula%20V1.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/7845/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/7845/record/PNG?record_type=2d&image_size=small",
+      "smiles": "C=CC=C",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "C%3DCC%3DC",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/C%3DCC%3DC/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/C%3DCC%3DC/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "1,3-Butadiene Structural Formula V1.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:1%2C3-Butadiene%20Structural%20Formula%20V1.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/1%2C3-Butadiene%20Structural%20Formula%20V1.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/1%2C3-Butadiene%20Structural%20Formula%20V1.svg?width=320"
+    },
+    {
+      "id": 11,
+      "name": "Изопрен",
+      "aliases": [
+        "2-метилбутадиен-1,3"
+      ],
+      "formula": "CH₂=C(CH₃)−CH=CH₂",
+      "plainFormula": "CH2=C(CH3)-CH=CH2",
+      "className": "Алкадиен",
+      "propertiesApplicationBiologicalRole": [
+        "Непредельный углеводород с двумя двойными связями.",
+        "Мономер природного каучука.",
+        "Вступает в реакции полимеризации."
+      ],
+      "keyReactions": [
+        "Полимеризация: nCH₂=C(CH₃)−CH=CH₂ → полиизопрен"
+      ],
+      "pubchemCid": 6557,
+      "pubchemName": "Isoprene",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/6557",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Isoprene%20Structural%20Formula%20V1.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Isoprene%20Structural%20Formula%20V1.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/6557/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/6557/record/PNG?record_type=2d&image_size=small",
+      "smiles": "C=C(C)C=C",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "C%3DC%28C%29C%3DC",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/C%3DC%28C%29C%3DC/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/C%3DC%28C%29C%3DC/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "Isoprene Structural Formula V1.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Isoprene%20Structural%20Formula%20V1.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Isoprene%20Structural%20Formula%20V1.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Isoprene%20Structural%20Formula%20V1.svg?width=320"
+    },
+    {
+      "id": 12,
+      "name": "Древесный спирт",
+      "aliases": [
+        "Метанол"
+      ],
+      "formula": "CH₃OH",
+      "plainFormula": "CH3OH",
+      "className": "Предельный одноатомный спирт",
+      "propertiesApplicationBiologicalRole": [
+        "Бесцветная жидкость, хорошо смешивается с водой.",
+        "Сильный яд: поражает зрение и нервную систему.",
+        "Используется как растворитель и сырьё для получения формальдегида."
+      ],
+      "keyReactions": [
+        "Окисление: CH₃OH + CuO → HCHO + Cu + H₂O"
+      ],
+      "pubchemCid": 887,
+      "pubchemName": "Methanol",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/887",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Methanol-2D.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Methanol-2D.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/887/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/887/record/PNG?record_type=2d&image_size=small",
+      "smiles": "CO",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "CO",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/CO/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/CO/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "Methanol-2D.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Methanol-2D.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Methanol-2D.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Methanol-2D.svg?width=320"
+    },
+    {
+      "id": 13,
+      "name": "Винный спирт",
+      "aliases": [
+        "Этанол",
+        "Этиловый спирт"
+      ],
+      "formula": "C₂H₅OH",
+      "plainFormula": "C2H5OH",
+      "className": "Предельный одноатомный спирт",
+      "propertiesApplicationBiologicalRole": [
+        "Бесцветная жидкость с характерным запахом, смешивается с водой.",
+        "Используется как растворитель, антисептик и топливо.",
+        "Получают брожением глюкозы."
+      ],
+      "keyReactions": [
+        "Окисление: CH₃CH₂OH + CuO → CH₃CHO + Cu + H₂O",
+        "Брожение: C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂"
+      ],
+      "pubchemCid": 702,
+      "pubchemName": "Ethanol",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/702",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Ethanol%20V1.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Ethanol%20V1.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/702/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/702/record/PNG?record_type=2d&image_size=small",
+      "smiles": "CCO",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "CCO",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/CCO/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/CCO/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "Ethanol V1.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Ethanol%20V1.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Ethanol%20V1.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Ethanol%20V1.svg?width=320"
+    },
+    {
+      "id": 14,
+      "name": "Глицерин",
+      "aliases": [
+        "Глицерол"
+      ],
+      "formula": "C₃H₅(OH)₃",
+      "plainFormula": "C3H5(OH)3",
+      "className": "Многоатомный спирт",
+      "propertiesApplicationBiologicalRole": [
+        "Вязкая сладковатая жидкость, хорошо растворимая в воде.",
+        "Входит в состав жиров в виде остатка глицерина.",
+        "Используется в косметике, медицине и для получения нитроглицерина."
+      ],
+      "keyReactions": [
+        "Образование триглицерида: глицерин + 3 высшие карбоновые кислоты → жир + 3H₂O"
+      ],
+      "pubchemCid": 753,
+      "pubchemName": "Glycerol",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/753",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Glycerol%20structure.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Glycerol%20structure.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/753/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/753/record/PNG?record_type=2d&image_size=small",
+      "smiles": "OCC(O)CO",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "OCC%28O%29CO",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/OCC%28O%29CO/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/OCC%28O%29CO/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "Glycerol structure.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Glycerol%20structure.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Glycerol%20structure.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Glycerol%20structure.svg?width=320"
+    },
+    {
+      "id": 15,
+      "name": "Тринитроглицерин",
+      "aliases": [
+        "Нитроглицерин"
+      ],
+      "formula": "C₃H₅(ONO₂)₃",
+      "plainFormula": "C3H5(ONO2)3",
+      "className": "Эфир, нитроэфир",
+      "propertiesApplicationBiologicalRole": [
+        "Тяжёлая маслянистая жидкость.",
+        "Взрывчатое вещество.",
+        "В малых дозах применяется в медицине как сосудорасширяющее средство."
+      ],
+      "keyReactions": [
+        "Получение нитрованием глицерина: C₃H₅(OH)₃ + 3HNO₃ → C₃H₅(ONO₂)₃ + 3H₂O"
+      ],
+      "pubchemCid": 4510,
+      "pubchemName": "Nitroglycerin",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/4510",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Nitroglycerin.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Nitroglycerin.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/4510/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/4510/record/PNG?record_type=2d&image_size=small",
+      "smiles": "C(C(CO[N+](=O)[O-])O[N+](=O)[O-])O[N+](=O)[O-]",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "C%28C%28CO%5BN%2B%5D%28%3DO%29%5BO-%5D%29O%5BN%2B%5D%28%3DO%29%5BO-%5D%29O%5BN%2B%5D%28%3DO%29%5BO-%5D",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/C%28C%28CO%5BN%2B%5D%28%3DO%29%5BO-%5D%29O%5BN%2B%5D%28%3DO%29%5BO-%5D%29O%5BN%2B%5D%28%3DO%29%5BO-%5D/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/C%28C%28CO%5BN%2B%5D%28%3DO%29%5BO-%5D%29O%5BN%2B%5D%28%3DO%29%5BO-%5D%29O%5BN%2B%5D%28%3DO%29%5BO-%5D/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "Nitroglycerin.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Nitroglycerin.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Nitroglycerin.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Nitroglycerin.svg?width=320"
+    },
+    {
+      "id": 16,
+      "name": "Этиленгликоль",
+      "aliases": [
+        "Этандиол-1,2"
+      ],
+      "formula": "HOCH₂−CH₂OH",
+      "plainFormula": "HOCH2-CH2OH",
+      "className": "Многоатомный предельный спирт",
+      "propertiesApplicationBiologicalRole": [
+        "Вязкая сладковатая токсичная жидкость.",
+        "Используется в антифризах и тормозных жидкостях.",
+        "Относится к двухатомным спиртам."
+      ],
+      "keyReactions": [
+        "Окисление сильными окислителями может приводить к щавелевой кислоте."
+      ],
+      "pubchemCid": 174,
+      "pubchemName": "Ethylene Glycol",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/174",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Ethylene%20glycol.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Ethylene%20glycol.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/174/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/174/record/PNG?record_type=2d&image_size=small",
+      "smiles": "OCCO",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "OCCO",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/OCCO/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/OCCO/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "Ethylene glycol.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Ethylene%20glycol.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Ethylene%20glycol.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Ethylene%20glycol.svg?width=320"
+    },
+    {
+      "id": 17,
+      "name": "Фенол",
+      "aliases": [
+        "Карболовая кислота"
+      ],
+      "formula": "C₆H₅OH",
+      "plainFormula": "C6H5OH",
+      "className": "Фенол",
+      "propertiesApplicationBiologicalRole": [
+        "Кристаллическое токсичное вещество с характерным запахом.",
+        "Проявляет слабые кислотные свойства.",
+        "Используется для получения пластмасс, красителей и лекарственных веществ."
+      ],
+      "keyReactions": [
+        "Реакция с щёлочью: C₆H₅OH + NaOH → C₆H₅ONa + H₂O",
+        "Реакция с бромной водой: C₆H₅OH + 3Br₂ → C₆H₂Br₃OH + 3HBr"
+      ],
+      "pubchemCid": 996,
+      "pubchemName": "Phenol",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/996",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Phenol-2.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Phenol-2.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/996/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/996/record/PNG?record_type=2d&image_size=small",
+      "smiles": "Oc1ccccc1",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "Oc1ccccc1",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/Oc1ccccc1/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/Oc1ccccc1/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "Phenol-2.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Phenol-2.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Phenol-2.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Phenol-2.svg?width=320"
+    },
+    {
+      "id": 18,
+      "name": "Формальдегид",
+      "aliases": [
+        "Муравьиный альдегид",
+        "Метаналь"
+      ],
+      "formula": "HCHO",
+      "plainFormula": "HCHO",
+      "className": "Альдегид",
+      "propertiesApplicationBiologicalRole": [
+        "Газ с резким запахом; водный раствор называют формалином.",
+        "Используется как дезинфицирующее средство и консервант биоматериалов.",
+        "Участвует в получении фенолформальдегидных смол."
+      ],
+      "keyReactions": [
+        "Поликонденсация с фенолом даёт фенолформальдегидные смолы."
+      ],
+      "pubchemCid": 712,
+      "pubchemName": "Formaldehyde",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/712",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Structural%20formula%20of%20formaldehyde.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Structural%20formula%20of%20formaldehyde.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/712/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/712/record/PNG?record_type=2d&image_size=small",
+      "smiles": "C=O",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "C%3DO",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/C%3DO/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/C%3DO/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "Structural formula of formaldehyde.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Structural%20formula%20of%20formaldehyde.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Structural%20formula%20of%20formaldehyde.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Structural%20formula%20of%20formaldehyde.svg?width=320"
+    },
+    {
+      "id": 19,
+      "name": "Ацетальдегид",
+      "aliases": [
+        "Уксусный альдегид",
+        "Этаналь"
+      ],
+      "formula": "CH₃CHO",
+      "plainFormula": "CH3CHO",
+      "className": "Альдегид",
+      "propertiesApplicationBiologicalRole": [
+        "Летучая жидкость с резким запахом.",
+        "Промежуточный продукт окисления этанола.",
+        "Даёт реакцию «серебряного зеркала»."
+      ],
+      "keyReactions": [
+        "Окисление: CH₃CHO + [O] → CH₃COOH",
+        "Серебряное зеркало: CH₃CHO + Ag₂O → CH₃COOH + 2Ag"
+      ],
+      "pubchemCid": 177,
+      "pubchemName": "Acetaldehyde",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/177",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Acetaldehyde-2D-flat.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Acetaldehyde-2D-flat.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/177/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/177/record/PNG?record_type=2d&image_size=small",
+      "smiles": "CC=O",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "CC%3DO",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/CC%3DO/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/CC%3DO/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "Acetaldehyde-2D-flat.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Acetaldehyde-2D-flat.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Acetaldehyde-2D-flat.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Acetaldehyde-2D-flat.svg?width=320"
+    },
+    {
+      "id": 20,
+      "name": "Муравьиная кислота",
+      "aliases": [
+        "Метановая кислота"
+      ],
+      "formula": "HCOOH",
+      "plainFormula": "HCOOH",
+      "className": "Предельная одноосновная карбоновая кислота",
+      "propertiesApplicationBiologicalRole": [
+        "Содержится в выделениях муравьёв и в крапиве.",
+        "Проявляет свойства карбоновых кислот и восстановительные свойства.",
+        "Реагирует с гидроксидом меди(II) при нагревании."
+      ],
+      "keyReactions": [
+        "Восстановительные свойства: HCOOH + 2Cu(OH)₂ → CO₂ + Cu₂O + 3H₂O"
+      ],
+      "pubchemCid": 284,
+      "pubchemName": "Formic Acid",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/284",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Formic%20acid.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Formic%20acid.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/284/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/284/record/PNG?record_type=2d&image_size=small",
+      "smiles": "O=C(O)",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "O%3DC%28O%29",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/O%3DC%28O%29/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/O%3DC%28O%29/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "Formic acid.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Formic%20acid.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Formic%20acid.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Formic%20acid.svg?width=320"
+    },
+    {
+      "id": 21,
+      "name": "Уксусная кислота",
+      "aliases": [
+        "Этановая кислота"
+      ],
+      "formula": "CH₃COOH",
+      "plainFormula": "CH3COOH",
+      "className": "Предельная одноосновная карбоновая кислота",
+      "propertiesApplicationBiologicalRole": [
+        "Бесцветная жидкость с резким запахом; водный раствор известен как уксус.",
+        "Используется в пищевой промышленности и органическом синтезе.",
+        "Реагирует с карбонатами и гидрокарбонатами с выделением CO₂."
+      ],
+      "keyReactions": [
+        "С содой: CH₃COOH + NaHCO₃ → CH₃COONa + H₂O + CO₂"
+      ],
+      "pubchemCid": 176,
+      "pubchemName": "Acetic Acid",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/176",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Acetic%20acid%20Structural%20Formula%20V1.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Acetic%20acid%20Structural%20Formula%20V1.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/176/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/176/record/PNG?record_type=2d&image_size=small",
+      "smiles": "CC(=O)O",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "CC%28%3DO%29O",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/CC%28%3DO%29O/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/CC%28%3DO%29O/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "Acetic acid Structural Formula V1.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Acetic%20acid%20Structural%20Formula%20V1.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Acetic%20acid%20Structural%20Formula%20V1.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Acetic%20acid%20Structural%20Formula%20V1.svg?width=320"
+    },
+    {
+      "id": 22,
+      "name": "Масляная кислота",
+      "aliases": [
+        "Бутановая кислота"
+      ],
+      "formula": "CH₃CH₂CH₂COOH",
+      "plainFormula": "CH3CH2CH2COOH",
+      "className": "Предельная одноосновная карбоновая кислота",
+      "propertiesApplicationBiologicalRole": [
+        "Жидкость с неприятным запахом прогорклого масла.",
+        "Встречается в природе в составе жиров.",
+        "Образует сложные эфиры с характерными запахами."
+      ],
+      "keyReactions": [
+        "Этерификация: CH₃CH₂CH₂COOH + C₂H₅OH ⇄ CH₃CH₂CH₂COOC₂H₅ + H₂O"
+      ],
+      "pubchemCid": 264,
+      "pubchemName": "Butyric Acid",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/264",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Butyric%20acid.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Butyric%20acid.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/264/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/264/record/PNG?record_type=2d&image_size=small",
+      "smiles": "CCCC(=O)O",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "CCCC%28%3DO%29O",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/CCCC%28%3DO%29O/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/CCCC%28%3DO%29O/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "Butyric acid.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Butyric%20acid.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Butyric%20acid.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Butyric%20acid.svg?width=320"
+    },
+    {
+      "id": 23,
+      "name": "Щавелевая кислота",
+      "aliases": [
+        "Этандиовая кислота"
+      ],
+      "formula": "HOOC−COOH",
+      "plainFormula": "HOOC-COOH",
+      "className": "Предельная двухосновная карбоновая кислота",
+      "propertiesApplicationBiologicalRole": [
+        "Двухосновная карбоновая кислота.",
+        "Встречается в щавеле и некоторых растениях.",
+        "Образует малорастворимый оксалат кальция."
+      ],
+      "keyReactions": [
+        "Образование оксалата кальция: H₂C₂O₄ + Ca(OH)₂ → CaC₂O₄↓ + 2H₂O"
+      ],
+      "pubchemCid": 971,
+      "pubchemName": "Oxalic Acid",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/971",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Oxals%C3%A4ure2.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Oxals%C3%A4ure2.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/971/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/971/record/PNG?record_type=2d&image_size=small",
+      "smiles": "O=C(O)C(=O)O",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "O%3DC%28O%29C%28%3DO%29O",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/O%3DC%28O%29C%28%3DO%29O/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/O%3DC%28O%29C%28%3DO%29O/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "Oxalsäure2.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Oxals%C3%A4ure2.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Oxals%C3%A4ure2.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Oxals%C3%A4ure2.svg?width=320"
+    },
+    {
+      "id": 24,
+      "name": "Бензойная кислота",
+      "aliases": [],
+      "formula": "C₆H₅COOH",
+      "plainFormula": "C6H5COOH",
+      "className": "Ароматическая одноосновная карбоновая кислота",
+      "propertiesApplicationBiologicalRole": [
+        "Белое кристаллическое вещество, плохо растворимое в холодной воде.",
+        "Используется как консервант E210.",
+        "Её соль бензоат натрия используется как консервант E211."
+      ],
+      "keyReactions": [
+        "Получение бензоата натрия: C₆H₅COOH + NaOH → C₆H₅COONa + H₂O"
+      ],
+      "pubchemCid": 243,
+      "pubchemName": "Benzoic Acid",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/243",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Benzoic%20acid.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Benzoic%20acid.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/243/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/243/record/PNG?record_type=2d&image_size=small",
+      "smiles": "O=C(O)c1ccccc1",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "O%3DC%28O%29c1ccccc1",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/O%3DC%28O%29c1ccccc1/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/O%3DC%28O%29c1ccccc1/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "Benzoic acid.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Benzoic%20acid.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Benzoic%20acid.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Benzoic%20acid.svg?width=320"
+    },
+    {
+      "id": 25,
+      "name": "Стеариновая кислота",
+      "aliases": [
+        "Октадекановая кислота"
+      ],
+      "formula": "C₁₇H₃₅COOH",
+      "plainFormula": "C17H35COOH",
+      "className": "Предельная одноосновная высшая карбоновая кислота",
+      "propertiesApplicationBiologicalRole": [
+        "Твёрдая высшая карбоновая кислота.",
+        "Входит в состав жиров.",
+        "Её натриевая соль является мылом."
+      ],
+      "keyReactions": [
+        "Образование стеарата натрия: C₁₇H₃₅COOH + NaOH → C₁₇H₃₅COONa + H₂O"
+      ],
+      "pubchemCid": 5281,
+      "pubchemName": "Stearic Acid",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/5281",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Stearic%20acid%20acsv.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Stearic%20acid%20acsv.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/5281/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/5281/record/PNG?record_type=2d&image_size=small",
+      "smiles": "CCCCCCCCCCCCCCCCCC(=O)O",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "CCCCCCCCCCCCCCCCCC%28%3DO%29O",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/CCCCCCCCCCCCCCCCCC%28%3DO%29O/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/CCCCCCCCCCCCCCCCCC%28%3DO%29O/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "Stearic acid acsv.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Stearic%20acid%20acsv.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Stearic%20acid%20acsv.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Stearic%20acid%20acsv.svg?width=320"
+    },
+    {
+      "id": 26,
+      "name": "Олеиновая кислота",
+      "aliases": [
+        "Цис-9-октадеценовая кислота"
+      ],
+      "formula": "C₁₇H₃₃COOH",
+      "plainFormula": "C17H33COOH",
+      "className": "Непредельная одноосновная высшая карбоновая кислота",
+      "propertiesApplicationBiologicalRole": [
+        "Жидкая непредельная высшая карбоновая кислота.",
+        "Входит в состав растительных масел и жиров.",
+        "При гидрировании превращается в стеариновую кислоту."
+      ],
+      "keyReactions": [
+        "Гидрирование: C₁₇H₃₃COOH + H₂ → C₁₇H₃₅COOH"
+      ],
+      "pubchemCid": 445639,
+      "pubchemName": "Oleic Acid",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/445639",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Oleic%20acid.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Oleic%20acid.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/445639/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/445639/record/PNG?record_type=2d&image_size=small",
+      "smiles": "CCCCCCCC/C=C\\CCCCCCCC(=O)O",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "CCCCCCCC%2FC%3DC%5CCCCCCCCC%28%3DO%29O",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/CCCCCCCC%2FC%3DC%5CCCCCCCCC%28%3DO%29O/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/CCCCCCCC%2FC%3DC%5CCCCCCCCC%28%3DO%29O/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "Oleic acid.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Oleic%20acid.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Oleic%20acid.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Oleic%20acid.svg?width=320"
+    },
+    {
+      "id": 27,
+      "name": "Глицин",
+      "aliases": [
+        "Аминоуксусная кислота"
+      ],
+      "formula": "NH₂CH₂COOH",
+      "plainFormula": "NH2CH2COOH",
+      "className": "Аминокислота",
+      "propertiesApplicationBiologicalRole": [
+        "Простейшая аминокислота.",
+        "Входит в состав белков.",
+        "Участвует в образовании пептидной связи."
+      ],
+      "keyReactions": [
+        "Образование дипептида с аланином: глицин + аланин → глицил-аланин + H₂O"
+      ],
+      "pubchemCid": 750,
+      "pubchemName": "Glycine",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/750",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Glycine%20Structural%20Formula%20V1.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Glycine%20Structural%20Formula%20V1.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/750/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/750/record/PNG?record_type=2d&image_size=small",
+      "smiles": "NCC(=O)O",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "NCC%28%3DO%29O",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/NCC%28%3DO%29O/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/NCC%28%3DO%29O/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "Glycine Structural Formula V1.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Glycine%20Structural%20Formula%20V1.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Glycine%20Structural%20Formula%20V1.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Glycine%20Structural%20Formula%20V1.svg?width=320"
+    },
+    {
+      "id": 28,
+      "name": "Аланин",
+      "aliases": [
+        "2-аминопропановая кислота"
+      ],
+      "formula": "CH₃CH(NH₂)COOH",
+      "plainFormula": "CH3CH(NH2)COOH",
+      "className": "Аминокислота",
+      "propertiesApplicationBiologicalRole": [
+        "Аминокислота, входящая в состав белков.",
+        "Проявляет амфотерные свойства из-за аминогруппы и карбоксильной группы.",
+        "Может образовывать пептидные связи."
+      ],
+      "keyReactions": [
+        "Реакция с кислотой идёт по аминогруппе, реакция со щёлочью — по карбоксильной группе."
+      ],
+      "pubchemCid": 5950,
+      "pubchemName": "L-Alanine",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/5950",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Alanine.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Alanine.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/5950/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/5950/record/PNG?record_type=2d&image_size=small",
+      "smiles": "C[C@H](N)C(=O)O",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "C%5BC%40H%5D%28N%29C%28%3DO%29O",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/C%5BC%40H%5D%28N%29C%28%3DO%29O/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/C%5BC%40H%5D%28N%29C%28%3DO%29O/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "Alanine.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Alanine.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Alanine.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Alanine.svg?width=320"
+    },
+    {
+      "id": 29,
+      "name": "Тростниковый сахар",
+      "aliases": [
+        "Сахароза"
+      ],
+      "formula": "C₁₂H₂₂O₁₁",
+      "plainFormula": "C12H22O11",
+      "className": "Углевод, дисахарид",
+      "propertiesApplicationBiologicalRole": [
+        "Обычный пищевой сахар.",
+        "Дисахарид, состоящий из остатков глюкозы и фруктозы.",
+        "При гидролизе образует глюкозу и фруктозу."
+      ],
+      "keyReactions": [
+        "Гидролиз: C₁₂H₂₂O₁₁ + H₂O → C₆H₁₂O₆ + C₆H₁₂O₆"
+      ],
+      "pubchemCid": 5988,
+      "pubchemName": "Sucrose",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/5988",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Sucrose.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Sucrose.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/5988/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/5988/record/PNG?record_type=2d&image_size=small",
+      "smiles": "OC[C@H]1O[C@@](CO)(O[C@H]2O[C@H](CO)[C@@H](O)[C@H](O)[C@H]2O)[C@@H](O)[C@@H]1O",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "OC%5BC%40H%5D1O%5BC%40%40%5D%28CO%29%28O%5BC%40H%5D2O%5BC%40H%5D%28CO%29%5BC%40%40H%5D%28O%29%5BC%40H%5D%28O%29%5BC%40H%5D2O%29%5BC%40%40H%5D%28O%29%5BC%40%40H%5D1O",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/OC%5BC%40H%5D1O%5BC%40%40%5D%28CO%29%28O%5BC%40H%5D2O%5BC%40H%5D%28CO%29%5BC%40%40H%5D%28O%29%5BC%40H%5D%28O%29%5BC%40H%5D2O%29%5BC%40%40H%5D%28O%29%5BC%40%40H%5D1O/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/OC%5BC%40H%5D1O%5BC%40%40%5D%28CO%29%28O%5BC%40H%5D2O%5BC%40H%5D%28CO%29%5BC%40%40H%5D%28O%29%5BC%40H%5D%28O%29%5BC%40H%5D2O%29%5BC%40%40H%5D%28O%29%5BC%40%40H%5D1O/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "Sucrose.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Sucrose.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Sucrose.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Sucrose.svg?width=320"
+    },
+    {
+      "id": 30,
+      "name": "Виноградный сахар",
+      "aliases": [
+        "Глюкоза"
+      ],
+      "formula": "C₆H₁₂O₆",
+      "plainFormula": "C6H12O6",
+      "className": "Углевод, моносахарид",
+      "propertiesApplicationBiologicalRole": [
+        "Важный источник энергии для живых организмов.",
+        "Моносахарид, содержит несколько гидроксильных групп и альдегидную группу в открытой форме.",
+        "Подвергается спиртовому брожению."
+      ],
+      "keyReactions": [
+        "Спиртовое брожение: C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂"
+      ],
+      "pubchemCid": 5793,
+      "pubchemName": "D-Glucose",
+      "pubchemPageUrl": "https://pubchem.ncbi.nlm.nih.gov/compound/5793",
+      "structuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Glucose%20structure.svg?width=512",
+      "structuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Glucose%20structure.svg?width=320",
+      "structuralFormulaSource": "Wikimedia Commons / Wikipedia structural formula image",
+      "pubchemStructuralFormulaImageUrl": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/5793/record/PNG?record_type=2d&image_size=large",
+      "pubchemStructuralFormulaImageUrlSmall": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/cid/5793/record/PNG?record_type=2d&image_size=small",
+      "smiles": "OC[C@H]1OC(O)[C@H](O)[C@@H](O)[C@H]1O",
+      "cactusIdentifierType": "SMILES",
+      "cactusIdentifierEncoded": "OC%5BC%40H%5D1OC%28O%29%5BC%40H%5D%28O%29%5BC%40%40H%5D%28O%29%5BC%40H%5D1O",
+      "cactusStructuralFormulaImageUrl": "https://cactus.nci.nih.gov/chemical/structure/OC%5BC%40H%5D1OC%28O%29%5BC%40H%5D%28O%29%5BC%40%40H%5D%28O%29%5BC%40H%5D1O/image?format=png&width=420&height=220&atomcolor=black&symbolfontsize=18&linewidth=2",
+      "cactusStructuralFormulaImageUrlSmall": "https://cactus.nci.nih.gov/chemical/structure/OC%5BC%40H%5D1OC%28O%29%5BC%40H%5D%28O%29%5BC%40%40H%5D%28O%29%5BC%40H%5D1O/image?format=png&width=260&height=160&atomcolor=black&symbolfontsize=16&linewidth=2",
+      "wikimediaCommonsFileName": "Glucose structure.svg",
+      "wikimediaCommonsFilePageUrl": "https://commons.wikimedia.org/wiki/File:Glucose%20structure.svg",
+      "wikipediaStructuralFormulaImageUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Glucose%20structure.svg?width=512",
+      "wikipediaStructuralFormulaImageUrlSmall": "https://commons.wikimedia.org/wiki/Special:FilePath/Glucose%20structure.svg?width=320"
+    }
+  ],
+  "notes": [
+    "Основные structuralFormulaImageUrl теперь ведут на Wikimedia Commons Special:FilePath, то есть на картинки формул из Wikipedia/Wikimedia Commons.",
+    "Для использования в Next.js проще выводить изображения через обычный <img>, так как Special:FilePath может делать redirect на upload.wikimedia.org.",
+    "Старые PubChem и CACTUS ссылки сохранены как fallback-поля там, где они были в предыдущей версии.",
+    "Файлы подобраны вручную по страницам Wikimedia Commons; если конкретный стиль формулы не понравится, можно заменить только wikimediaCommonsFileName у нужного вещества."
+  ]
+}
