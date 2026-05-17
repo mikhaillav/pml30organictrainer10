@@ -1,4 +1,5 @@
 import type { Compound, Question, QuestionType } from "@/types/compound";
+import { getLocalStructureImageUrl } from "./localStructureImages";
 
 const MIN_HINT_LENGTH = 18;
 
@@ -52,31 +53,14 @@ function makeOptions(correctAnswer: string, wrongAnswers: string[]): string[] | 
   return shuffle([correctAnswer, ...shuffle(uniqueWrongAnswers).slice(0, 2)]);
 }
 
-export function getStructureImageUrl(compound: Compound, size: "small" | "large" = "small") {
-  const urls =
-    size === "small"
-      ? [
-          compound.structuralFormulaImageUrlSmall,
-          compound.wikipediaStructuralFormulaImageUrlSmall,
-          compound.cactusStructuralFormulaImageUrlSmall,
-          compound.pubchemStructuralFormulaImageUrlSmall,
-          compound.structuralFormulaImageUrl,
-          compound.wikipediaStructuralFormulaImageUrl,
-          compound.cactusStructuralFormulaImageUrl,
-          compound.pubchemStructuralFormulaImageUrl,
-        ]
-      : [
-          compound.structuralFormulaImageUrl,
-          compound.wikipediaStructuralFormulaImageUrl,
-          compound.cactusStructuralFormulaImageUrl,
-          compound.pubchemStructuralFormulaImageUrl,
-          compound.structuralFormulaImageUrlSmall,
-          compound.wikipediaStructuralFormulaImageUrlSmall,
-          compound.cactusStructuralFormulaImageUrlSmall,
-          compound.pubchemStructuralFormulaImageUrlSmall,
-        ];
+export function getStructureImageUrl(compound: Compound, _size: "small" | "large" = "small") {
+  const localImageUrl = getLocalStructureImageUrl(compound.id);
 
-  return urls.find((url): url is string => Boolean(url));
+  if (localImageUrl) {
+    return localImageUrl;
+  }
+
+  return undefined;
 }
 
 function buildQuestion(
