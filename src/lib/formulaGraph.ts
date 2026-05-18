@@ -432,6 +432,16 @@ function edgeOrderBetween(graph: AtomGraph, left: number, right: number): number
   )?.order ?? 0;
 }
 
+function bondOrderSignature(graph: AtomGraph): string {
+  const counts: Record<1 | 2 | 3, number> = { 1: 0, 2: 0, 3: 0 };
+
+  for (const edge of graph.edges) {
+    counts[edge.order] += 1;
+  }
+
+  return `${counts[1]}:${counts[2]}:${counts[3]}`;
+}
+
 function graphsMatch(answer: AtomGraph, target: AtomGraph): boolean {
   if (answer.atoms.length !== target.atoms.length || answer.edges.length !== target.edges.length) {
     return false;
@@ -518,7 +528,14 @@ export function checkStructuralFormula(formula: StructuralFormula, compound: Com
     return { isCorrect: true, message: "Граф структуры совпадает с эталоном." };
   }
 
-  if (sameComposition(formulaCompositionFromBuilder(formula.nodes), parseComposition(compound.plainFormula))) {
+  if (target && bondOrderSignature(answer) !== bondOrderSignature(target)) {
+    return {
+      isCorrect: false,
+      message: `Неверное количество связей. Проверь одинарные, двойные и тройные связи. Эталон: ${compound.formula}.`,
+    };
+  }
+
+  if (!target && sameComposition(formulaCompositionFromBuilder(formula.nodes), parseComposition(compound.plainFormula))) {
     return { isCorrect: true, message: "Атомный состав совпадает; структура может быть записана иначе." };
   }
 
