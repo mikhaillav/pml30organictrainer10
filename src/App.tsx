@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { FormulaConstructor } from "@/components/FormulaConstructor";
 import rawData from "@/data/organic_compounds_with_structures.json";
 import { formatCompoundText, generateQuestion, getStructureImageUrl } from "@/lib/generateQuestion";
 import type { CompoundData, Question, TrainingMode } from "@/types/compound";
@@ -11,6 +12,7 @@ const TRAINING_MODES: { mode: TrainingMode; label: string; description: string }
   { mode: "names", label: "Названия/формулы", description: "выбери название" },
   { mode: "properties", label: "Формула/свойства", description: "выбери свойства" },
   { mode: "mixed", label: "Смешанное", description: "оба типа" },
+  { mode: "constructor", label: "Конструктор", description: "собери формулу" },
 ];
 
 function optionClassName(question: Question, selectedAnswer: string | null, option: string) {
@@ -68,7 +70,7 @@ export default function App() {
         </header>
 
         <div className="rounded-[2rem] border border-white/80 bg-white/78 p-4 shadow-[0_24px_80px_rgba(15,23,42,0.16)] backdrop-blur sm:p-7">
-          <div className="mb-5 grid gap-2 rounded-3xl border border-slate-200 bg-white/70 p-2 sm:grid-cols-3">
+          <div className="mb-5 grid gap-2 rounded-3xl border border-slate-200 bg-white/70 p-2 sm:grid-cols-4">
             {TRAINING_MODES.map((item) => {
               const isActive = item.mode === trainingMode;
 
@@ -104,7 +106,11 @@ export default function App() {
                     Вопрос
                   </span>
                   <span className="rounded-full bg-emerald-100 px-3 py-1 text-sm font-semibold text-emerald-900">
-                    {question.answerType === "properties" ? "выбери свойства" : "выбери название"}
+                    {question.answerType === "constructor"
+                      ? "собери формулу"
+                      : question.answerType === "properties"
+                        ? "выбери свойства"
+                        : "выбери название"}
                   </span>
                 </div>
 
@@ -121,31 +127,37 @@ export default function App() {
                 <h2 className="text-balance text-2xl font-black leading-tight text-slate-950 sm:text-3xl">
                   {question.prompt}
                 </h2>
-                <p className="mt-4 inline-flex rounded-2xl bg-slate-100 px-4 py-2 text-lg font-black text-slate-900">
-                  {question.compound.formula}
-                </p>
+                {question.answerType === "constructor" ? null : (
+                  <p className="mt-4 inline-flex rounded-2xl bg-slate-100 px-4 py-2 text-lg font-black text-slate-900">
+                    {question.compound.formula}
+                  </p>
+                )}
               </div>
 
-              <div className="mt-5 grid gap-3 sm:gap-4">
-                {question.options.map((option) => (
-                  <button
-                    key={option}
-                    type="button"
-                    disabled={selectedAnswer !== null}
-                    onClick={() => setSelectedAnswer(option)}
-                    className={optionClassName(question, selectedAnswer, option)}
-                  >
-                    <span className="relative z-10 flex items-center justify-between gap-4">
-                      <span>{option}</span>
-                      {!selectedAnswer ? (
-                        <span className="h-3 w-3 rounded-full bg-emerald-300 opacity-0 transition group-hover:opacity-100" />
-                      ) : null}
-                    </span>
-                  </button>
-                ))}
-              </div>
+              {question.answerType === "constructor" ? (
+                <FormulaConstructor compound={question.compound} onNext={nextQuestion} />
+              ) : (
+                <div className="mt-5 grid gap-3 sm:gap-4">
+                  {question.options.map((option) => (
+                    <button
+                      key={option}
+                      type="button"
+                      disabled={selectedAnswer !== null}
+                      onClick={() => setSelectedAnswer(option)}
+                      className={optionClassName(question, selectedAnswer, option)}
+                    >
+                      <span className="relative z-10 flex items-center justify-between gap-4">
+                        <span>{option}</span>
+                        {!selectedAnswer ? (
+                          <span className="h-3 w-3 rounded-full bg-emerald-300 opacity-0 transition group-hover:opacity-100" />
+                        ) : null}
+                      </span>
+                    </button>
+                  ))}
+                </div>
+              )}
 
-              {selectedAnswer ? (
+              {selectedAnswer && question.answerType !== "constructor" ? (
                 <section className="mt-5 rounded-3xl border border-slate-200 bg-slate-950 p-5 text-white shadow-xl sm:p-7">
                   <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
                     <h3 className="text-3xl font-black">

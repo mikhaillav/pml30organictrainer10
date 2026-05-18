@@ -32,14 +32,14 @@ export type CompoundData = {
   compounds: Compound[];
 };
 
-export type TrainingMode = "names" | "properties" | "mixed";
+export type TrainingMode = "names" | "properties" | "mixed" | "constructor";
 
-export type QuestionType = "nameByStructure" | "propertiesByStructure";
+export type QuestionType = "nameByStructure" | "propertiesByStructure" | "formulaConstructor";
 
 export type Question = {
   prompt: string;
   imageUrl?: string;
-  answerType: "name" | "properties";
+  answerType: "name" | "properties" | "constructor";
   correctAnswer: string;
   options: string[];
   compound: Compound;

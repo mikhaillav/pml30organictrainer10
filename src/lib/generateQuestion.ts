@@ -10,6 +10,7 @@ const QUESTION_TYPES_BY_MODE: Record<TrainingMode, QuestionType[]> = {
   names: ["nameByStructure"],
   properties: ["propertiesByStructure"],
   mixed: QUESTION_TYPES,
+  constructor: ["formulaConstructor"],
 };
 
 function shuffle<T>(items: T[]): T[] {
@@ -126,6 +127,19 @@ function buildQuestion(
             key,
           }
         : null;
+    }
+
+    case "formulaConstructor": {
+      return {
+        prompt: `Собери формулу: ${compound.name}`,
+        imageUrl: undefined,
+        answerType: "constructor",
+        correctAnswer: compound.formula,
+        options: [],
+        compound,
+        type,
+        key,
+      };
     }
   }
 }
