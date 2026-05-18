@@ -56,21 +56,21 @@ export default function App() {
   const resultImageUrl = question ? getStructureImageUrl(question.compound, "large") : undefined;
 
   return (
-    <main className="min-h-screen overflow-hidden bg-[#f4f1e8] px-4 py-6 text-slate-950 sm:px-6 lg:px-8">
+    <main className="min-h-screen overflow-hidden bg-[#f4f1e8] px-3 py-3 text-slate-950 sm:px-6 sm:py-6 lg:px-8">
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_20%_15%,rgba(16,185,129,0.20),transparent_28%),radial-gradient(circle_at_78%_20%,rgba(14,165,233,0.16),transparent_30%),linear-gradient(120deg,rgba(15,23,42,0.05)_1px,transparent_1px)] bg-[length:auto,auto,34px_34px]" />
 
-      <section className="mx-auto flex min-h-[calc(100vh-3rem)] w-full max-w-4xl flex-col justify-center">
-        <header className="mb-5 text-center sm:mb-8">
-          <p className="mb-3 text-sm font-bold uppercase tracking-[0.28em] text-emerald-700">
+      <section className="mx-auto flex min-h-[calc(100svh-1.5rem)] w-full max-w-4xl flex-col justify-start sm:min-h-[calc(100vh-3rem)] sm:justify-center">
+        <header className="mb-3 text-center sm:mb-8">
+          <p className="mb-2 text-xs font-bold uppercase tracking-[0.22em] text-emerald-700 sm:mb-3 sm:text-sm sm:tracking-[0.28em]">
             30 важных соединений
           </p>
-          <h1 className="font-serif text-4xl font-black tracking-tight text-slate-950 sm:text-6xl">
+          <h1 className="font-serif text-3xl font-black tracking-tight text-slate-950 sm:text-6xl">
             Тренажёр органических соединений
           </h1>
         </header>
 
-        <div className="rounded-[2rem] border border-white/80 bg-white/78 p-4 shadow-[0_24px_80px_rgba(15,23,42,0.16)] backdrop-blur sm:p-7">
-          <div className="mb-5 grid gap-2 rounded-3xl border border-slate-200 bg-white/70 p-2 sm:grid-cols-4">
+        <div className="rounded-[1.5rem] border border-white/80 bg-white/78 p-3 shadow-[0_24px_80px_rgba(15,23,42,0.16)] backdrop-blur sm:rounded-[2rem] sm:p-7">
+          <div className="mb-3 grid gap-1.5 rounded-2xl border border-slate-200 bg-white/70 p-1.5 sm:mb-5 sm:gap-2 sm:rounded-3xl sm:p-2 md:grid-cols-4">
             {TRAINING_MODES.map((item) => {
               const isActive = item.mode === trainingMode;
 
@@ -79,14 +79,14 @@ export default function App() {
                   key={item.mode}
                   type="button"
                   onClick={() => setTrainingMode(item.mode)}
-                  className={`rounded-2xl px-4 py-3 text-left transition focus:outline-none focus:ring-4 focus:ring-emerald-100 ${
+                  className={`rounded-xl px-3 py-2 text-left transition focus:outline-none focus:ring-4 focus:ring-emerald-100 sm:rounded-2xl sm:px-4 sm:py-3 ${
                     isActive
                       ? "bg-slate-950 text-white shadow-sm"
                       : "bg-transparent text-slate-700 hover:bg-emerald-50 hover:text-slate-950"
                   }`}
                 >
-                  <span className="block text-sm font-black">{item.label}</span>
-                  <span className={`mt-1 block text-xs font-semibold ${isActive ? "text-emerald-200" : "text-slate-500"}`}>
+                  <span className="block text-xs font-black sm:text-sm">{item.label}</span>
+                  <span className={`mt-0.5 block text-[11px] font-semibold sm:mt-1 sm:text-xs ${isActive ? "text-emerald-200" : "text-slate-500"}`}>
                     {item.description}
                   </span>
                 </button>
@@ -100,8 +100,8 @@ export default function App() {
             </div>
           ) : (
             <>
-              <div className="rounded-3xl border border-slate-200 bg-[#fffdf7] p-5 sm:p-7">
-                <div className="mb-5 flex flex-wrap items-center gap-2">
+              <div className="rounded-2xl border border-slate-200 bg-[#fffdf7] p-3 sm:rounded-3xl sm:p-7">
+                <div className="mb-3 flex flex-wrap items-center gap-2 sm:mb-5">
                   <span className="rounded-full bg-slate-950 px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-white">
                     Вопрос
                   </span>
@@ -124,7 +124,7 @@ export default function App() {
                   </div>
                 ) : null}
 
-                <h2 className="text-balance text-2xl font-black leading-tight text-slate-950 sm:text-3xl">
+                <h2 className="text-balance text-xl font-black leading-tight text-slate-950 sm:text-3xl">
                   {question.prompt}
                 </h2>
                 {question.answerType === "constructor" ? null : (
