@@ -60,16 +60,16 @@ export default function App() {
       <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_20%_15%,rgba(16,185,129,0.20),transparent_28%),radial-gradient(circle_at_78%_20%,rgba(14,165,233,0.16),transparent_30%),linear-gradient(120deg,rgba(15,23,42,0.05)_1px,transparent_1px)] bg-[length:auto,auto,34px_34px]" />
 
       <section className="mx-auto flex min-h-[calc(100svh-1.5rem)] w-full max-w-4xl flex-col justify-start sm:min-h-[calc(100vh-3rem)] sm:justify-center">
-        <header className="mb-3 text-center sm:mb-8">
+        <header className={`text-center sm:mb-8 ${question?.answerType === "constructor" ? "mb-2 sm:mb-8" : "mb-3"}`}>
           <p className="mb-2 text-xs font-bold uppercase tracking-[0.22em] text-emerald-700 sm:mb-3 sm:text-sm sm:tracking-[0.28em]">
             30 важных соединений
           </p>
-          <h1 className="font-serif text-3xl font-black tracking-tight text-slate-950 sm:text-6xl">
+          <h1 className={`font-serif font-black tracking-tight text-slate-950 sm:text-6xl ${question?.answerType === "constructor" ? "text-2xl" : "text-3xl"}`}>
             Тренажёр органических соединений
           </h1>
         </header>
 
-        <div className="rounded-[1.5rem] border border-white/80 bg-white/78 p-3 shadow-[0_24px_80px_rgba(15,23,42,0.16)] backdrop-blur sm:rounded-[2rem] sm:p-7">
+        <div className={`rounded-[1.5rem] border border-white/80 bg-white/78 shadow-[0_24px_80px_rgba(15,23,42,0.16)] backdrop-blur sm:rounded-[2rem] sm:p-7 ${question?.answerType === "constructor" ? "p-2" : "p-3"}`}>
           <div className="mb-3 grid gap-1.5 rounded-2xl border border-slate-200 bg-white/70 p-1.5 sm:mb-5 sm:gap-2 sm:rounded-3xl sm:p-2 md:grid-cols-4">
             {TRAINING_MODES.map((item) => {
               const isActive = item.mode === trainingMode;
@@ -100,7 +100,7 @@ export default function App() {
             </div>
           ) : (
             <>
-              <div className="rounded-2xl border border-slate-200 bg-[#fffdf7] p-3 sm:rounded-3xl sm:p-7">
+              <div className={`rounded-2xl border border-slate-200 bg-[#fffdf7] sm:rounded-3xl sm:p-7 ${question.answerType === "constructor" ? "p-2" : "p-3"}`}>
                 <div className="mb-3 flex flex-wrap items-center gap-2 sm:mb-5">
                   <span className="rounded-full bg-slate-950 px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-white">
                     Вопрос
@@ -124,7 +124,7 @@ export default function App() {
                   </div>
                 ) : null}
 
-                <h2 className="text-balance text-xl font-black leading-tight text-slate-950 sm:text-3xl">
+                <h2 className={`text-balance font-black leading-tight text-slate-950 sm:text-3xl ${question.answerType === "constructor" ? "text-lg" : "text-xl"}`}>
                   {question.prompt}
                 </h2>
                 {question.answerType === "constructor" ? null : (

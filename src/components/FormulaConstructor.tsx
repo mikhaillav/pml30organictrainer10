@@ -210,15 +210,15 @@ export function FormulaConstructor({ compound, onNext }: FormulaConstructorProps
   }
 
   return (
-    <section className="mt-3 overflow-hidden rounded-[1.5rem] border border-slate-200 bg-[#101820] text-white shadow-2xl sm:mt-5 sm:rounded-[2rem]">
+    <section className="mt-2 overflow-hidden rounded-[1.25rem] border border-slate-200 bg-[#101820] text-white shadow-2xl sm:mt-5 sm:rounded-[2rem]">
       <div className="grid gap-0 lg:grid-cols-[0.82fr_1.18fr]">
-        <div className="border-b border-white/10 bg-[radial-gradient(circle_at_30%_0%,rgba(52,211,153,0.24),transparent_35%),linear-gradient(160deg,#101820,#17212b)] p-3 sm:p-5 lg:border-b-0 lg:border-r lg:p-7">
+        <div className="border-b border-white/10 bg-[radial-gradient(circle_at_30%_0%,rgba(52,211,153,0.24),transparent_35%),linear-gradient(160deg,#101820,#17212b)] p-2.5 sm:p-5 lg:border-b-0 lg:border-r lg:p-7">
           <div className="flex flex-wrap items-end justify-between gap-2 lg:block">
             <div>
               <p className="mb-1 text-[10px] font-black uppercase tracking-[0.22em] text-emerald-200 sm:mb-3 sm:text-xs sm:tracking-[0.28em]">Конструктор</p>
-              <h3 className="font-serif text-2xl font-black leading-tight sm:text-3xl lg:text-4xl">Собери формулу</h3>
+              <h3 className="font-serif text-xl font-black leading-tight sm:text-3xl lg:text-4xl">Собери формулу</h3>
             </div>
-            <p className="rounded-full bg-white/10 px-3 py-1 text-sm font-bold text-white sm:mt-3 sm:bg-transparent sm:px-0 sm:py-0 sm:text-lg">{compound.name}</p>
+            <p className="rounded-full bg-white/10 px-3 py-1 text-base font-black text-white sm:mt-3 sm:bg-transparent sm:px-0 sm:py-0 sm:text-lg">{compound.name}</p>
           </div>
           <p className="mt-3 hidden max-w-sm leading-7 text-slate-300 sm:block">
             Можно собрать обычную запись для сложных формул или визуальную структуру как граф из кирпичиков.
@@ -227,19 +227,19 @@ export function FormulaConstructor({ compound, onNext }: FormulaConstructorProps
           <button
             type="button"
             onClick={() => setShowHint((value) => !value)}
-            className="mt-3 w-full rounded-2xl border border-emerald-200/30 bg-white/10 px-4 py-3 text-sm font-black text-emerald-100 transition hover:bg-white/15 sm:mt-5"
+            className="mt-2 w-full rounded-xl border border-emerald-200/30 bg-white/10 px-4 py-2.5 text-sm font-black text-emerald-100 transition hover:bg-white/15 sm:mt-5 sm:rounded-2xl sm:py-3"
           >
             {showHint ? "Скрыть подсказку" : "Дать подсказку"}
           </button>
 
           {showHint ? (
-            <div className="mt-3 rounded-2xl border border-white/15 bg-white p-3 text-slate-950 shadow-xl sm:mt-4">
+            <div className="mt-2 rounded-2xl border border-white/15 bg-white p-2 text-slate-950 shadow-xl sm:mt-4 sm:p-3">
               <p className="mb-2 text-xs font-black uppercase tracking-[0.18em] text-slate-500">Можно срисовать</p>
               {hintImageUrl ? (
                 <img
                   src={hintImageUrl}
                   alt={`Подсказка: структурная формула ${compound.name}`}
-                  className="max-h-[22svh] w-full object-contain sm:max-h-56"
+                  className="max-h-[18svh] w-full object-contain sm:max-h-56"
                 />
               ) : (
                 <p className="text-sm font-semibold text-slate-600">Для этого вещества нет картинки подсказки.</p>
@@ -247,7 +247,7 @@ export function FormulaConstructor({ compound, onNext }: FormulaConstructorProps
             </div>
           ) : null}
 
-          <div className="mt-3 grid grid-cols-2 gap-2 rounded-2xl bg-white/8 p-1.5 sm:mt-6 sm:p-2">
+          <div className="mt-2 grid grid-cols-2 gap-2 rounded-xl bg-white/8 p-1.5 sm:mt-6 sm:rounded-2xl sm:p-2">
             {[
               { mode: "plain" as const, label: "Обычная" },
               { mode: "structural" as const, label: "Структурная" },
@@ -266,10 +266,10 @@ export function FormulaConstructor({ compound, onNext }: FormulaConstructorProps
           </div>
         </div>
 
-        <div className="bg-[#f8f4e9] p-3 text-slate-950 sm:p-6">
+        <div className="bg-[#f8f4e9] p-2.5 text-slate-950 sm:p-6">
           {mode === "plain" ? (
             <div>
-              <div className="max-h-[18svh] min-h-16 overflow-y-auto rounded-2xl border-2 border-dashed border-slate-300 bg-white p-3 shadow-inner sm:min-h-24 sm:rounded-3xl sm:p-4">
+              <div className="max-h-[16svh] min-h-14 overflow-y-auto rounded-2xl border-2 border-dashed border-slate-300 bg-white p-2.5 shadow-inner sm:min-h-24 sm:rounded-3xl sm:p-4">
                 {plainTokens.length ? (
                   <div className="flex flex-wrap gap-1.5 text-xl font-black sm:gap-2 sm:text-2xl">
                     {plainTokens.map((token, index) => (
@@ -295,7 +295,7 @@ export function FormulaConstructor({ compound, onNext }: FormulaConstructorProps
                 {plainFormula || "формула появится здесь"}
               </p>
 
-              <div className="mt-3 flex max-h-[24svh] flex-wrap gap-1.5 overflow-y-auto pr-1 sm:mt-5 sm:max-h-none sm:gap-2 sm:overflow-visible sm:pr-0">
+              <div className="mt-2 flex max-h-[24svh] flex-wrap gap-1.5 overflow-y-auto pr-1 sm:mt-5 sm:max-h-none sm:gap-2 sm:overflow-visible sm:pr-0">
                 {PLAIN_TOKENS.map((token) => (
                   <button
                     key={token}
@@ -304,7 +304,7 @@ export function FormulaConstructor({ compound, onNext }: FormulaConstructorProps
                       setPlainTokens((items) => [...items, token]);
                       setResult(null);
                     }}
-                    className="rounded-xl border border-slate-200 bg-white px-3 py-2 text-base font-black shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-300 hover:bg-emerald-50 sm:rounded-2xl sm:px-4 sm:py-3 sm:text-lg"
+                    className="rounded-xl border border-slate-200 bg-white px-3.5 py-2.5 text-lg font-black shadow-sm transition hover:-translate-y-0.5 hover:border-emerald-300 hover:bg-emerald-50 sm:rounded-2xl sm:px-4 sm:py-3 sm:text-lg"
                   >
                     {token}
                   </button>
@@ -316,7 +316,7 @@ export function FormulaConstructor({ compound, onNext }: FormulaConstructorProps
               <svg
                 ref={svgRef}
                 viewBox="0 0 640 320"
-                className="h-[34svh] max-h-[320px] min-h-[190px] w-full touch-none rounded-2xl border border-slate-200 bg-[linear-gradient(90deg,rgba(15,23,42,0.05)_1px,transparent_1px),linear-gradient(rgba(15,23,42,0.05)_1px,transparent_1px)] bg-[length:32px_32px] shadow-inner sm:rounded-3xl"
+                className="h-[32svh] max-h-[320px] min-h-[180px] w-full touch-none rounded-2xl border border-slate-200 bg-[linear-gradient(90deg,rgba(15,23,42,0.05)_1px,transparent_1px),linear-gradient(rgba(15,23,42,0.05)_1px,transparent_1px)] bg-[length:32px_32px] shadow-inner sm:h-[34svh] sm:rounded-3xl"
                 onPointerMove={handlePointerMove}
                 onPointerUp={() => setDraggingNodeId(null)}
                 onPointerCancel={() => setDraggingNodeId(null)}
@@ -414,7 +414,7 @@ export function FormulaConstructor({ compound, onNext }: FormulaConstructorProps
                 })}
               </svg>
 
-              <div className="mt-3 grid max-h-[28svh] gap-3 overflow-y-auto rounded-2xl border border-slate-200 bg-white p-3 sm:mt-4 sm:max-h-none sm:rounded-3xl sm:overflow-visible lg:grid-cols-[1fr_auto]">
+              <div className="mt-2 grid max-h-[24svh] gap-2 overflow-y-auto rounded-2xl border border-slate-200 bg-white p-2.5 sm:mt-4 sm:max-h-none sm:gap-3 sm:rounded-3xl sm:overflow-visible sm:p-3 lg:grid-cols-[1fr_auto]">
                 <div>
                   <p className="mb-2 text-[10px] font-black uppercase tracking-[0.18em] text-slate-500 sm:text-xs sm:tracking-[0.2em]">Кирпичики</p>
                   <div className="flex flex-wrap gap-1.5 sm:gap-2">
@@ -423,7 +423,7 @@ export function FormulaConstructor({ compound, onNext }: FormulaConstructorProps
                         key={brick.label}
                         type="button"
                         onClick={() => addNode(brick.label)}
-                        className="rounded-xl border border-slate-200 bg-slate-50 px-3 py-2 text-base font-black transition hover:-translate-y-0.5 hover:border-emerald-300 hover:bg-emerald-50 sm:rounded-2xl sm:px-4 sm:py-3 sm:text-lg"
+                        className="rounded-xl border border-slate-200 bg-slate-50 px-3.5 py-2.5 text-lg font-black transition hover:-translate-y-0.5 hover:border-emerald-300 hover:bg-emerald-50 sm:rounded-2xl sm:px-4 sm:py-3 sm:text-lg"
                       >
                         {brick.text}
                       </button>
@@ -431,7 +431,7 @@ export function FormulaConstructor({ compound, onNext }: FormulaConstructorProps
                   </div>
                 </div>
 
-                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
+                <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-1">
                   <div>
                     <p className="mb-2 text-[10px] font-black uppercase tracking-[0.18em] text-slate-500 sm:text-xs sm:tracking-[0.2em]">Количество</p>
                     <div className="flex gap-2">
@@ -470,21 +470,14 @@ export function FormulaConstructor({ compound, onNext }: FormulaConstructorProps
                 </div>
               </div>
 
-              <p className="mt-2 text-xs font-semibold text-slate-600 sm:mt-3 sm:text-sm">
+              <p className="mt-1.5 text-[11px] font-semibold leading-snug text-slate-600 sm:mt-3 sm:text-sm">
                 Клик по двум узлам создаёт связь. Узлы можно таскать. Двойной клик удаляет узел.
                 Клик по связи удаляет её.
               </p>
             </div>
           )}
 
-          {result ? (
-            <div className={`mt-3 rounded-2xl border p-3 sm:mt-5 sm:rounded-3xl sm:p-4 ${resultClassName(result)}`}>
-              <p className="text-xl font-black sm:text-2xl">{result.isCorrect ? "Верно!" : "Неверно"}</p>
-              <p className="mt-1 font-semibold">{result.message}</p>
-            </div>
-          ) : null}
-
-          <div className="mt-3 grid grid-cols-2 gap-2 sm:mt-5 sm:flex sm:flex-wrap sm:gap-3">
+          <div className="mt-2 grid grid-cols-2 gap-2 sm:mt-5 sm:flex sm:flex-wrap sm:gap-3">
             <button
               type="button"
               onClick={checkAnswer}
@@ -514,6 +507,13 @@ export function FormulaConstructor({ compound, onNext }: FormulaConstructorProps
               Следующий вопрос
             </button>
           </div>
+
+          {result ? (
+            <div className={`mt-2 rounded-2xl border p-2.5 sm:mt-5 sm:rounded-3xl sm:p-4 ${resultClassName(result)}`}>
+              <p className="text-xl font-black sm:text-2xl">{result.isCorrect ? "Верно!" : "Неверно"}</p>
+              <p className="mt-1 font-semibold">{result.message}</p>
+            </div>
+          ) : null}
         </div>
       </div>
     </section>
