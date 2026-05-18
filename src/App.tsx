@@ -1,11 +1,17 @@
 import { useEffect, useState } from "react";
 import rawData from "@/data/organic_compounds_with_structures.json";
 import { formatCompoundText, generateQuestion, getStructureImageUrl } from "@/lib/generateQuestion";
-import type { CompoundData, Question } from "@/types/compound";
+import type { CompoundData, Question, TrainingMode } from "@/types/compound";
 
 const data = rawData as CompoundData;
 const compounds = data.compounds;
 const RECENT_QUESTION_LIMIT = 12;
+
+const TRAINING_MODES: { mode: TrainingMode; label: string; description: string }[] = [
+  { mode: "names", label: "Названия/формулы", description: "выбери название" },
+  { mode: "properties", label: "Формула/свойства", description: "выбери свойства" },
+  { mode: "mixed", label: "Смешанное", description: "оба типа" },
+];
 
 function optionClassName(question: Question, selectedAnswer: string | null, option: string) {
   const base =
@@ -30,9 +36,10 @@ export default function App() {
   const [question, setQuestion] = useState<Question | null>(null);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [recentQuestionKeys, setRecentQuestionKeys] = useState<string[]>([]);
+  const [trainingMode, setTrainingMode] = useState<TrainingMode>("mixed");
 
   function nextQuestion() {
-    const next = generateQuestion(compounds, recentQuestionKeys);
+    const next = generateQuestion(compounds, recentQuestionKeys, trainingMode);
 
     setQuestion(next);
     setSelectedAnswer(null);
@@ -41,7 +48,7 @@ export default function App() {
 
   useEffect(() => {
     nextQuestion();
-  }, []);
+  }, [trainingMode]);
 
   const isCorrect = question && selectedAnswer === question.correctAnswer;
   const resultImageUrl = question ? getStructureImageUrl(question.compound, "large") : undefined;
@@ -61,6 +68,30 @@ export default function App() {
         </header>
 
         <div className="rounded-[2rem] border border-white/80 bg-white/78 p-4 shadow-[0_24px_80px_rgba(15,23,42,0.16)] backdrop-blur sm:p-7">
+          <div className="mb-5 grid gap-2 rounded-3xl border border-slate-200 bg-white/70 p-2 sm:grid-cols-3">
+            {TRAINING_MODES.map((item) => {
+              const isActive = item.mode === trainingMode;
+
+              return (
+                <button
+                  key={item.mode}
+                  type="button"
+                  onClick={() => setTrainingMode(item.mode)}
+                  className={`rounded-2xl px-4 py-3 text-left transition focus:outline-none focus:ring-4 focus:ring-emerald-100 ${
+                    isActive
+                      ? "bg-slate-950 text-white shadow-sm"
+                      : "bg-transparent text-slate-700 hover:bg-emerald-50 hover:text-slate-950"
+                  }`}
+                >
+                  <span className="block text-sm font-black">{item.label}</span>
+                  <span className={`mt-1 block text-xs font-semibold ${isActive ? "text-emerald-200" : "text-slate-500"}`}>
+                    {item.description}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+
           {!question ? (
             <div className="rounded-3xl border border-dashed border-slate-300 bg-slate-50 p-10 text-center text-slate-600">
               Подготавливаю первый вопрос...
@@ -90,6 +121,9 @@ export default function App() {
                 <h2 className="text-balance text-2xl font-black leading-tight text-slate-950 sm:text-3xl">
                   {question.prompt}
                 </h2>
+                <p className="mt-4 inline-flex rounded-2xl bg-slate-100 px-4 py-2 text-lg font-black text-slate-900">
+                  {question.compound.formula}
+                </p>
               </div>
 
               <div className="mt-5 grid gap-3 sm:gap-4">
@@ -130,8 +164,14 @@ export default function App() {
                     <div className="space-y-3 rounded-2xl bg-white/8 p-4">
                       <p className="text-lg">
                         <span className="text-slate-300">Правильный ответ: </span>
-                        <strong>{question.correctAnswer}</strong>
+                        <strong>{question.compound.name}</strong>
                       </p>
+                      {question.answerType === "properties" ? (
+                        <p className="leading-7 text-slate-200">
+                          <span className="text-slate-300">Правильные свойства: </span>
+                          <strong>{question.correctAnswer}</strong>
+                        </p>
+                      ) : null}
                       <p>
                         <span className="text-slate-300">Формула: </span>
                         <strong>{question.compound.formula}</strong>

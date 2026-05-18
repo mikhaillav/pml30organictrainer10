@@ -1,10 +1,16 @@
-import type { Compound, Question, QuestionType } from "@/types/compound";
+import type { Compound, Question, QuestionType, TrainingMode } from "@/types/compound";
 import { getLocalStructureImageUrl } from "./localStructureImages";
 
 const MIN_HINT_LENGTH = 18;
 const PROPERTY_OPTION_LENGTH = 180;
 
 const QUESTION_TYPES: QuestionType[] = ["nameByStructure", "propertiesByStructure"];
+
+const QUESTION_TYPES_BY_MODE: Record<TrainingMode, QuestionType[]> = {
+  names: ["nameByStructure"],
+  properties: ["propertiesByStructure"],
+  mixed: QUESTION_TYPES,
+};
 
 function shuffle<T>(items: T[]): T[] {
   return [...items].sort(() => Math.random() - 0.5);
@@ -124,9 +130,13 @@ function buildQuestion(
   }
 }
 
-export function generateQuestion(compounds: Compound[], recentQuestionKeys: string[] = []): Question {
+export function generateQuestion(
+  compounds: Compound[],
+  recentQuestionKeys: string[] = [],
+  trainingMode: TrainingMode = "mixed",
+): Question {
   const shuffledCompounds = shuffle(compounds);
-  const shuffledTypes = shuffle(QUESTION_TYPES);
+  const shuffledTypes = shuffle(QUESTION_TYPES_BY_MODE[trainingMode]);
   const recentKeys = new Set(recentQuestionKeys);
 
   for (const compound of shuffledCompounds) {

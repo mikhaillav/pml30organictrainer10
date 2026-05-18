@@ -32,6 +32,8 @@ export type CompoundData = {
   compounds: Compound[];
 };
 
+export type TrainingMode = "names" | "properties" | "mixed";
+
 export type QuestionType = "nameByStructure" | "propertiesByStructure";
 
 export type Question = {
