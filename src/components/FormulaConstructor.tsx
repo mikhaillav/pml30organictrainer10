@@ -264,6 +264,37 @@ export function FormulaConstructor({ compound, onNext }: FormulaConstructorProps
               </button>
             ))}
           </div>
+
+          <div className="mt-5 hidden gap-3 lg:grid">
+            <button
+              type="button"
+              onClick={checkAnswer}
+              className="rounded-2xl bg-emerald-400 px-5 py-3 text-base font-black text-slate-950 transition hover:-translate-y-0.5 hover:bg-emerald-300 focus:outline-none focus:ring-4 focus:ring-emerald-200"
+            >
+              Проверить
+            </button>
+            <button
+              type="button"
+              onClick={() => setShowHint((value) => !value)}
+              className="rounded-2xl bg-amber-200 px-5 py-3 text-base font-black text-slate-950 transition hover:-translate-y-0.5 hover:bg-amber-100"
+            >
+              Подсказка
+            </button>
+            <button
+              type="button"
+              onClick={() => resetAll()}
+              className="rounded-2xl bg-white/12 px-5 py-3 text-base font-black text-white transition hover:bg-white/18"
+            >
+              Очистить
+            </button>
+            <button
+              type="button"
+              onClick={handleNextQuestion}
+              className="rounded-2xl bg-white px-5 py-3 text-base font-black text-slate-950 transition hover:-translate-y-0.5 hover:bg-emerald-50"
+            >
+              Следующий вопрос
+            </button>
+          </div>
         </div>
 
         <div className="bg-[#f8f4e9] p-2.5 text-slate-950 sm:p-6">
@@ -486,20 +517,13 @@ export function FormulaConstructor({ compound, onNext }: FormulaConstructorProps
             </div>
           )}
 
-          <div className="mt-2 grid grid-cols-2 gap-2 sm:mt-5 sm:flex sm:flex-wrap sm:gap-3">
+          <div className="mt-2 grid grid-cols-3 gap-2 sm:mt-5 sm:flex sm:flex-wrap sm:gap-3 lg:hidden">
             <button
               type="button"
               onClick={checkAnswer}
               className="rounded-full bg-emerald-400 px-3 py-2.5 text-sm font-black text-slate-950 transition hover:-translate-y-0.5 hover:bg-emerald-300 focus:outline-none focus:ring-4 focus:ring-emerald-200 sm:px-6 sm:py-3 sm:text-base"
             >
               Проверить
-            </button>
-            <button
-              type="button"
-              onClick={() => setShowHint((value) => !value)}
-              className="rounded-full bg-amber-200 px-3 py-2.5 text-sm font-black text-slate-950 transition hover:-translate-y-0.5 hover:bg-amber-100 sm:px-6 sm:py-3 sm:text-base"
-            >
-              Подсказка
             </button>
             <button
               type="button"

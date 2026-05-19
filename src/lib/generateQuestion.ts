@@ -196,6 +196,27 @@ export function generateQuestion(
   };
 }
 
+export function generateQuestionQueue(
+  compounds: Compound[],
+  trainingMode: TrainingMode = "mixed",
+): Question[] {
+  const queue: Question[] = [];
+  const shuffledCompounds = shuffle(compounds);
+  const shuffledTypes = shuffle(QUESTION_TYPES_BY_MODE[trainingMode]);
+
+  for (const compound of shuffledCompounds) {
+    for (const type of shuffledTypes) {
+      const question = buildQuestion(compound, type, compounds);
+
+      if (question) {
+        queue.push(question);
+      }
+    }
+  }
+
+  return queue.length > 0 ? queue : [generateQuestion(compounds, [], trainingMode)];
+}
+
 export function formatCompoundText(value: string[]): string {
   return joinedText(value) || "Нет краткого описания.";
 }

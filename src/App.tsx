@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 import { FormulaConstructor } from "@/components/FormulaConstructor";
 import rawData from "@/data/organic_compounds_with_structures.json";
-import { formatCompoundText, generateQuestion, getStructureImageUrl } from "@/lib/generateQuestion";
+import { formatCompoundText, generateQuestionQueue, getStructureImageUrl } from "@/lib/generateQuestion";
 import type { CompoundData, Question, TrainingMode } from "@/types/compound";
 
 const data = rawData as CompoundData;
 const compounds = data.compounds;
-const RECENT_QUESTION_LIMIT = 12;
 
 const TRAINING_MODES: { mode: TrainingMode; label: string; description: string }[] = [
   { mode: "names", label: "Названия/формулы", description: "выбери название" },
@@ -37,19 +36,26 @@ function optionClassName(question: Question, selectedAnswer: string | null, opti
 export default function App() {
   const [question, setQuestion] = useState<Question | null>(null);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
-  const [recentQuestionKeys, setRecentQuestionKeys] = useState<string[]>([]);
+  const [questionQueue, setQuestionQueue] = useState<Question[]>([]);
   const [trainingMode, setTrainingMode] = useState<TrainingMode>("mixed");
 
   function nextQuestion() {
-    const next = generateQuestion(compounds, recentQuestionKeys, trainingMode);
+    setQuestionQueue((queue) => {
+      const activeQueue = queue.length > 0 ? queue : generateQuestionQueue(compounds, trainingMode);
+      const [next, ...rest] = activeQueue;
 
-    setQuestion(next);
-    setSelectedAnswer(null);
-    setRecentQuestionKeys((keys) => [next.key, ...keys.filter((key) => key !== next.key)].slice(0, RECENT_QUESTION_LIMIT));
+      setQuestion(next);
+      setSelectedAnswer(null);
+      return rest;
+    });
   }
 
   useEffect(() => {
-    nextQuestion();
+    const [next, ...rest] = generateQuestionQueue(compounds, trainingMode);
+
+    setQuestion(next);
+    setSelectedAnswer(null);
+    setQuestionQueue(rest);
   }, [trainingMode]);
 
   const isCorrect = question && selectedAnswer === question.correctAnswer;
