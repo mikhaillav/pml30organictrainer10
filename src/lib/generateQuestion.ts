@@ -131,7 +131,7 @@ function buildQuestion(
 
     case "formulaConstructor": {
       return {
-        prompt: `Собери формулу: ${compound.name}`,
+        prompt: "Собери формулу",
         imageUrl: undefined,
         answerType: "constructor",
         correctAnswer: compound.formula,

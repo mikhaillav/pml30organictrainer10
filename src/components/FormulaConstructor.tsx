@@ -111,6 +111,7 @@ export function FormulaConstructor({ compound, onNext }: FormulaConstructorProps
   const svgRef = useRef<SVGSVGElement | null>(null);
   const dragOffsetRef = useRef({ x: 0, y: 0 });
   const dragMovedRef = useRef(false);
+  const lastPointerTypeRef = useRef<React.PointerEvent["pointerType"]>("mouse");
 
   const plainFormula = useMemo(() => normalizePlainFormula(plainTokens), [plainTokens]);
   const hintImageUrl = getStructureImageUrl(compound, "large");
@@ -218,7 +219,6 @@ export function FormulaConstructor({ compound, onNext }: FormulaConstructorProps
               <p className="mb-1 text-[10px] font-black uppercase tracking-[0.22em] text-emerald-200 sm:mb-3 sm:text-xs sm:tracking-[0.28em]">Конструктор</p>
               <h3 className="font-serif text-xl font-black leading-tight sm:text-3xl lg:text-4xl">Собери формулу</h3>
             </div>
-            <p className="rounded-full bg-white/10 px-3 py-1 text-base font-black text-white sm:mt-3 sm:bg-transparent sm:px-0 sm:py-0 sm:text-lg">{compound.name}</p>
           </div>
           <p className="mt-3 hidden max-w-sm leading-7 text-slate-300 sm:block">
             Можно собрать обычную запись для сложных формул или визуальную структуру как граф из кирпичиков.
@@ -267,6 +267,11 @@ export function FormulaConstructor({ compound, onNext }: FormulaConstructorProps
         </div>
 
         <div className="bg-[#f8f4e9] p-2.5 text-slate-950 sm:p-6">
+          <div className="mb-2 rounded-2xl border border-emerald-200 bg-emerald-50 px-3 py-2 sm:mb-4 sm:px-4 sm:py-3">
+            <p className="text-[10px] font-black uppercase tracking-[0.2em] text-emerald-700 sm:text-xs">Собираем</p>
+            <p className="text-xl font-black leading-tight text-slate-950 sm:text-3xl">{compound.name}</p>
+          </div>
+
           {mode === "plain" ? (
             <div>
               <div className="max-h-[16svh] min-h-14 overflow-y-auto rounded-2xl border-2 border-dashed border-slate-300 bg-white p-2.5 shadow-inner sm:min-h-24 sm:rounded-3xl sm:p-4">
@@ -295,7 +300,7 @@ export function FormulaConstructor({ compound, onNext }: FormulaConstructorProps
                 {plainFormula || "формула появится здесь"}
               </p>
 
-              <div className="mt-2 flex max-h-[24svh] flex-wrap gap-1.5 overflow-y-auto pr-1 sm:mt-5 sm:max-h-none sm:gap-2 sm:overflow-visible sm:pr-0">
+              <div className="mt-2 flex flex-wrap gap-1.5 pr-1 sm:mt-5 sm:gap-2 sm:pr-0">
                 {PLAIN_TOKENS.map((token) => (
                   <button
                     key={token}
@@ -374,6 +379,7 @@ export function FormulaConstructor({ compound, onNext }: FormulaConstructorProps
                       transform={`translate(${node.x} ${node.y})`}
                       onPointerDown={(event) => {
                         event.stopPropagation();
+                        lastPointerTypeRef.current = event.pointerType;
                         event.currentTarget.setPointerCapture(event.pointerId);
                         if (svgRef.current) {
                           const point = getSvgPoint(event, svgRef.current);
@@ -392,6 +398,9 @@ export function FormulaConstructor({ compound, onNext }: FormulaConstructorProps
                       }}
                       onDoubleClick={(event) => {
                         event.stopPropagation();
+                        if (lastPointerTypeRef.current !== "mouse") {
+                          return;
+                        }
                         removeNode(node.id);
                       }}
                       className="cursor-grab active:cursor-grabbing"
@@ -414,7 +423,7 @@ export function FormulaConstructor({ compound, onNext }: FormulaConstructorProps
                 })}
               </svg>
 
-              <div className="mt-2 grid max-h-[24svh] gap-2 overflow-y-auto rounded-2xl border border-slate-200 bg-white p-2.5 sm:mt-4 sm:max-h-none sm:gap-3 sm:rounded-3xl sm:overflow-visible sm:p-3 lg:grid-cols-[1fr_auto]">
+              <div className="mt-2 grid gap-2 rounded-2xl border border-slate-200 bg-white p-2.5 sm:mt-4 sm:gap-3 sm:rounded-3xl sm:p-3 lg:grid-cols-[1fr_auto]">
                 <div>
                   <p className="mb-2 text-[10px] font-black uppercase tracking-[0.18em] text-slate-500 sm:text-xs sm:tracking-[0.2em]">Кирпичики</p>
                   <div className="flex flex-wrap gap-1.5 sm:gap-2">
@@ -471,7 +480,7 @@ export function FormulaConstructor({ compound, onNext }: FormulaConstructorProps
               </div>
 
               <p className="mt-1.5 text-[11px] font-semibold leading-snug text-slate-600 sm:mt-3 sm:text-sm">
-                Клик по двум узлам создаёт связь. Узлы можно таскать. Двойной клик удаляет узел.
+                Клик по двум узлам создаёт связь. Узлы можно таскать. Двойной клик мышью удаляет узел.
                 Клик по связи удаляет её.
               </p>
             </div>
